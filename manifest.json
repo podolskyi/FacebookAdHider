@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "FacebookNoAds",
+  "description": "This extension automatically hides all sponsored and suggested facebook posts.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+    "matches": ["https://www.facebook.com/*"],
+    "js": ["contentscript.js"]
+    }
+  ],
+
+  "icons": {"128": "icon.png" },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
