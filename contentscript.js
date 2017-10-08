@@ -22,17 +22,9 @@ function findElementAndHideParent(elements, innerhtml, parentname){
     }
 }
 
-function removeVoorgesteld(){
-    findElementAndHideParent(document.getElementsByClassName("_m8d"), "Voorgesteld bericht", "_5pcr fbUserStory");
-}
-
-function removeSponsored(){
-    findElementAndHideParent(document.getElementsByClassName("_3e_2 _m8c"), "Gesponsord", "_5pcr fbUserStory");
-}
-
 var observer = new MutationObserver(function(mutations, observer) {
-    removeSponsored();
-    removeVoorgesteld();
+    findElementAndHideParent(document.getElementsByClassName("_m8d"), "Voorgesteld bericht", "_5pcr fbUserStory");
+    findElementAndHideParent(document.getElementsByClassName("_3e_2 _m8c"), "Gesponsord", "_5pcr fbUserStory");
 });
 
 observer.observe(document, {
